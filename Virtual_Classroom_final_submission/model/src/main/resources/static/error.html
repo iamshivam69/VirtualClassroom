@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error page</title>
+</head>
+<body>
+<h1>An error occurred</h1>
+<p>Status: <span id="status"></span></p>
+<p>Error: <span id="error"></span></p>
+<p>Message: <span id="message"></span></p>
+<p>Path: <span id="path"></span></p>
+<script>
+    document.getElementById('status').innerText = window.location.search.split('&')[0].split('=')[1];
+    document.getElementById('error').innerText = window.location.search.split('&')[1].split('=')[1];
+    document.getElementById('message').innerText = window.location.search.split('&')[2].split('=')[1];
+    document.getElementById('path').innerText = window.location.search.split('&')[3].split('=')[1];
+</script>
+</body>
+</html>
